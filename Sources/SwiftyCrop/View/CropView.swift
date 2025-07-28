@@ -2,7 +2,6 @@ import SwiftUI
 import PhotosUI
 
 struct CropView: View {
-  @Environment(\.dismiss) private var dismiss
   @StateObject private var viewModel: CropViewModel
   
   @State private var isCropping: Bool = false
@@ -60,7 +59,6 @@ struct CropView: View {
           configuration: configuration,
           dismiss: {
             onCancel?()
-            dismiss()
           }
         ) {
           await MainActor.run {
@@ -69,7 +67,6 @@ struct CropView: View {
           let result = cropImage()
           await MainActor.run {
             onComplete(result)
-            dismiss()
             isCropping = false
           }
         }
@@ -113,7 +110,6 @@ struct CropView: View {
           localizableTableName: localizableTableName,
           dismiss: {
             onCancel?()
-            dismiss()
           }
         ) {
           await MainActor.run {
@@ -122,7 +118,6 @@ struct CropView: View {
           let result = cropImage()
           await MainActor.run {
             onComplete(result)
-            dismiss()
             isCropping = false
           }
         }
