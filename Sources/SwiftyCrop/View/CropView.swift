@@ -192,14 +192,9 @@ struct CropView: View {
         .scaleEffect(viewModel.scale)
         .offset(viewModel.offset)
         .opacity(0.5)
-        .overlay(
-          GeometryReader { geometry in
-            Color.clear
-              .onAppear {
-                viewModel.updateMaskDimensions(for: geometry.size)
-              }
-          }
-        )
+        .onGeometryChange(for: CGSize.self, of: { $0.size }) {
+            viewModel.updateMaskDimensions(for: $0)
+        }
       
       Image(uiImage: image)
         .resizable()
