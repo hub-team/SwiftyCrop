@@ -97,6 +97,7 @@ struct CropView: View {
         
         if configuration.rotateImageWithButtons {
           Legacy_RotateButtonsView(viewModel: viewModel, configuration: configuration)
+            .zIndex(1)
         }
         
         Spacer()

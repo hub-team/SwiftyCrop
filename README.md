@@ -40,6 +40,8 @@ The following languages are supported & localized:
 - 🇰🇷 Korean
 - 🇯🇵 Japanese
 - 🇨🇳 Chinese
+- 🇫🇮 Finnish
+- 🌐 Traditional Chinese
 
 The localization file can be found in `Sources/SwiftyCrop/Resources`.
 
@@ -246,6 +248,10 @@ Thanks to [@SuperY](https://github.com/SuperY) for adding the chinese localizati
 Thanks to [@mosliem](https://github.com/mosliem) for adding the cropping in background thread 🧵
 
 Thanks to [@krayc425](https://github.com/krayc425) for adding visionOS support 🕶️
+
+Thanks to [@KuuttiProductions](https://github.com/KuuttiProductions) for adding the finnish localization 🇫🇮
+
+Thanks to [@puyanlin](https://github.com/puyanlin) for adding the traditional chinese localization 🌐
 
 ## 📃 License
 
